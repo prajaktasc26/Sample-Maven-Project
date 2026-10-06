@@ -19,6 +19,9 @@ pipeline {
                 success {
                     junit '**/target/surefire-reports/*.xml'
                 }
+                failure {
+                    echo 'Unit test failed. Please check the reports for the details'
+                }
             }
         }
     }
